@@ -1,0 +1,16 @@
+extends layout
+
+block append head
+  title Sensor
+
+block append scripts
+  script(src="/socket.io/socket.io.js")
+  script
+    var socket = io.connect("http://localhost")
+    socket.on("sensors", function(data) {
+      console.log(data);
+    })
+    socket.emit("sensorsGet")
+
+block body
+  p test

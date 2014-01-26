@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect("http://localhost")
+      socket.on("sensors", function(data) {
+        console.log(data);
+      })
+      socket.emit("sensorsGet")
+      
+    </script>
+    <link href="style.css" rel="stylesheet">
+    <title>Sensor</title>
+  </head>
+  <body>
+    <p>test</p>
+  </body>
+</html>
