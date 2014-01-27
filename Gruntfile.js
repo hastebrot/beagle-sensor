@@ -16,8 +16,15 @@ module.exports = function(grunt) {
     },
     simplemocha: {
       options: {
-        globals: ["chai"], timeout: 8000, ignoreLeaks: false, ui: "bdd", reporter: "tap"
-      }, all: { src: ["test/*Spec.js"] }
+        globals: ["chai"],
+        timeout: 8000,
+        ignoreLeaks: false,
+        ui: "bdd",
+        reporter: "tap"
+      },
+      all: {
+        src: ["test/*Spec.js"]
+      }
     }
   });
 
