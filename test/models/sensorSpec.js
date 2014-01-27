@@ -39,12 +39,11 @@ describe("Sensor", function() {
 
     it("should find sensors per day", function(done) {
       var day = moment("2004-05-06")
-      Sensor
-        .findByDay(day, function(err, sensors) {
-          if (err) done(err)
-          expect(sensors).to.have.length(1)
-          done()
-        })
+      Sensor.findByDay(day, function(err, sensors) {
+        if (err) done(err)
+        expect(sensors).to.have.length(1)
+        done()
+      })
     })
   })
 
